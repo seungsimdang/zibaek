@@ -1,18 +1,12 @@
 n, k = map(int, input().split())
 
 cnt = 0
-while(True):
+while n != 1:
     if n % k == 0:
-        break
-    
-    n -= 1
-    cnt += 1
-
-while(True):
-    if(n == 1):
-        break
-
-    n //= k
-    cnt += 1
+        n //= k
+        cnt += 1
+    else:
+        n -= 1
+        cnt += 1
 
 print(cnt)
